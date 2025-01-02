@@ -59,5 +59,13 @@ namespace Negocio
         {
             comando.Parameters.AddWithValue(parametro, valor);
         }
+        public void cerrarCoenxion()
+        {
+            if(lector != null)
+            {
+                lector.Close();
+                conexion.Close();
+            }
+        }
     }
 }
