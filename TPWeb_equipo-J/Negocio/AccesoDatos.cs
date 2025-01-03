@@ -8,7 +8,7 @@ namespace Negocio
 {
     public class AccesoDatos
     {
-        private string dbConexion = "server=.\\\\SQLEXPRESS; database= PROMOS_DB; integrated security= true";
+        private string dbConexion = "server=.\\SQLEXPRESS; database= PROMOS_DB; integrated security= true";
         private SqlConnection conexion;
         
         private SqlCommand comando;
