@@ -4,9 +4,24 @@
 
     <main>
         <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+            <h1 id="aspnetTitle">Lista voucher</h1>
+            
+        </section>
+        <section class="row">
+            
+            <div class="col-12">
+                <div class="mb-4">
+                    <label for="txtVoucher" class="form-label">Canjea el codigo</label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtVoucher"></asp:TextBox>
+                    
+                </div>
+                <div class="mb-4">
+                    <asp:Button  runat="server" ID="btnCanjearCupon" OnClick="btnCanjearCupon_Click" Text="Canjear Cupon" CssClass="btn btn-primary"/>
+                </div>
+                
+
+            </div>
+            
         </section>
 
         

@@ -72,3 +72,7 @@ C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-
 C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Presentacion\obj\Debug\Presentacion.dll
 C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Presentacion\bin\Dominio.dll
+C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Presentacion\bin\Negocio.dll
+C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Presentacion\bin\Dominio.pdb
+C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Presentacion\bin\Negocio.pdb

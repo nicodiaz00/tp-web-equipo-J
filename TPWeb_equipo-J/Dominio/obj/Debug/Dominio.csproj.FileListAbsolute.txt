@@ -1,0 +1,6 @@
+C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Dominio\bin\Debug\Dominio.dll
+C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Dominio\bin\Debug\Dominio.pdb
+C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Dominio\obj\Debug\Dominio.dll
+C:\Users\nico\Documents\c#\experiencia-universidad\tp-web-equipo-j\TPWeb_equipo-j\Dominio\obj\Debug\Dominio.pdb
