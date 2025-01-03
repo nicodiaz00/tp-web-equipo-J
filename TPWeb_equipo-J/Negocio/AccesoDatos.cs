@@ -59,7 +59,7 @@ namespace Negocio
         {
             comando.Parameters.AddWithValue(parametro, valor);
         }
-        public void cerrarCoenxion()
+        public void cerrarConexion()
         {
             if(lector != null)
             {
