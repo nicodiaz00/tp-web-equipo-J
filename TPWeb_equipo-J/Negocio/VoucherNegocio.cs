@@ -23,10 +23,6 @@ namespace Negocio
                     Voucher voucher = new Voucher();
                     voucher.CodigoVoucher = (string)accesoDatos.Lector["CodigoVoucher"];
                     voucher.IdCliente = accesoDatos.Lector["IdCliente"] == DBNull.Value ? -1 : Convert.ToInt32(accesoDatos.Lector["IdCliente"]);
-
-
-
-
                     voucher.FechaCanje = accesoDatos.Lector["FechaCanje"] == DBNull.Value ? DateTime.MinValue : (DateTime)accesoDatos.Lector["FechaCanje"];
                     voucher.IdArticulo = accesoDatos.Lector["IdArticulo"] == DBNull.Value ? -1 : (int)accesoDatos.Lector["IdCliente"];
 
