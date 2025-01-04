@@ -8,7 +8,7 @@ namespace Negocio
 {
     public class VoucherNegocio
     {
-        public List<Voucher> listarVoucher(string codigo)
+        public List<Voucher> listarVoucher()
         {
             
             List <Voucher> listaVouchers = new List<Voucher>();
@@ -22,9 +22,13 @@ namespace Negocio
                 {
                     Voucher voucher = new Voucher();
                     voucher.CodigoVoucher = (string)accesoDatos.Lector["CodigoVoucher"];
-                    voucher.IdCliente = (int)accesoDatos.Lector["IdCliente"];
-                    voucher.FechaCanje = (DateTime)accesoDatos.Lector["FechaCanje"];
-                    voucher.IdArticulo = (int)accesoDatos.Lector["IdArticulo"];
+                    voucher.IdCliente = accesoDatos.Lector["IdCliente"] == DBNull.Value ? -1 : Convert.ToInt32(accesoDatos.Lector["IdCliente"]);
+
+
+
+
+                    voucher.FechaCanje = accesoDatos.Lector["FechaCanje"] == DBNull.Value ? DateTime.MinValue : (DateTime)accesoDatos.Lector["FechaCanje"];
+                    voucher.IdArticulo = accesoDatos.Lector["IdArticulo"] == DBNull.Value ? -1 : (int)accesoDatos.Lector["IdCliente"];
 
                     listaVouchers.Add(voucher);
                 }
