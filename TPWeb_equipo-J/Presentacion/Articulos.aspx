@@ -55,7 +55,7 @@
             <div class="card-body" style="text-align: center">
                 <h5 class="card-title">Auricular Gamer A1S Rojo</h5>
                 <p class="card-text">Los auriculares A1S Rojo se posicionan como una opción atractiva para los gamers que buscan una experiencia de audio envolvente.</p>
-                <asp:Button CssClass="btn btn-primary" ID="btnNoEste" OnClick="btnQuieroEste_Click" runat="server" Text="No!, este!" />
+                <asp:Button CssClass="btn btn-primary" ID="btnEste" OnClick="btnQuieroEste_Click" runat="server" Text="...y este!!" />
             </div>
         </div>
 
@@ -85,7 +85,7 @@
             <div class="card-body" style="text-align: center">
                 <h5 class="card-title">Mouse Gamer Profesional</h5>
                 <p class="card-text">Diseño de posición de tecla 6D recién actualizado, funcionamiento rápido.</p>
-                <asp:Button CssClass="btn btn-primary" ID="btnMejorEste" OnClick="btnQuieroEste_Click" runat="server" Text="Mejor este!!" />
+                <asp:Button CssClass="btn btn-primary" ID="btnEsteTambien" OnClick="btnQuieroEste_Click" runat="server" Text="...y este también!!!" />
             </div>
         </div>
 

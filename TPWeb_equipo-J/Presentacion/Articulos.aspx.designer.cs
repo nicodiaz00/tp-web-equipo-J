@@ -24,21 +24,21 @@ namespace Presentacion
         protected global::System.Web.UI.WebControls.Button btnQuieroEste;
 
         /// <summary>
-        /// btnNoEste control.
+        /// btnEste control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNoEste;
+        protected global::System.Web.UI.WebControls.Button btnEste;
 
         /// <summary>
-        /// btnMejorEste control.
+        /// btnEsteTambien control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMejorEste;
+        protected global::System.Web.UI.WebControls.Button btnEsteTambien;
     }
 }
