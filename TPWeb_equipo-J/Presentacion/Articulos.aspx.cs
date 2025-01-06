@@ -18,5 +18,10 @@ namespace Presentacion
                 //aca deberiamos mostrar la lista de articulos para que el usuario pueda elegir
             }
         }
+
+        protected void btnQuieroEste_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

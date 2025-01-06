@@ -2,14 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="card" style="width: 18rem;">
-        <img src="https://acdn.mitiendanube.com/stores/001/040/110/products/ri178-d847760cabdb7652a216962881798843-480-0.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -30,12 +22,13 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card-body" style=" text-align:center">
+                <h5 class="card-title">Mochila River Plate</h5>
+                <p class="card-text">La mejor mochila, la mochila del campeon!</p>
+                <asp:Button CssClass="btn btn-primary" ID="btnQuieroEste" OnClick="btnQuieroEste_Click" runat="server" Text="Quiero este!" />                
             </div>
         </div>
     </div>
-    <asp:GridView runat="server" ID="dgvVoucher"></asp:GridView>
+
+    
 </asp:Content>
