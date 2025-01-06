@@ -21,7 +21,7 @@ namespace Presentacion
 
         protected void btnQuieroEste_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("PromoForm.aspx", false);
         }
     }
 }
