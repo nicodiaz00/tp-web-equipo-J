@@ -17,11 +17,11 @@
                                 <img src="https://acdn.mitiendanube.com/stores/001/163/953/products/mochila-river-gde-21-11dea84792ef66135816881361376456-1024-1024.jpg" class="d-block w-100" alt="Imagen 3">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPremio01" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPremio01" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -48,11 +48,11 @@
                                 <img src="https://www.musicosas.com.ar/wp-content/uploads/2024/07/29744_4-5.jpg" class="d-block w-100" alt="Imagen 3">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPremio02" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPremio02" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -79,11 +79,11 @@
                                 <img src="https://tienda.starware.com.ar/wp-content/uploads/2021/07/mouse-gamer-profesional-g5-6d-usb-pro-gamer-3200dpi-led-7-colores-2324-3908-600x600.jpg" class="d-block w-100" alt="Imagen 3">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPremio03" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPremio03" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
