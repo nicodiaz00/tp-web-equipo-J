@@ -14,27 +14,35 @@ namespace Presentacion
     {
         private List<Voucher> listadoVoucher = new List<Voucher>();
 
-        private Voucher encontrarVoucher(string codigo, List<Voucher> listado)
+        
+
+        private Voucher encontrarCupon(string codigo, List<Voucher> listadoVoucher)
         {
             Voucher voucher = null;
-
-            foreach (Voucher cupon in listado)
+            foreach(Voucher cupon in listadoVoucher)
             {
-                if (cupon.CodigoVoucher.ToString() == codigo)
+                if(cupon.CodigoVoucher.ToString() == codigo)
                 {
-                    
-                    if (cupon.IdCliente != -1)
-                    {
-                        lblMensaje.Text = "Cupon canjeado";
-                        return null;
-                    }                   
                     voucher = cupon;
+                    Session["voucher"] = cupon;
                     break;
                 }
             }
-
             return voucher;
         }
+        private void cuponUsado(Voucher cupon)
+        {
+            if (cupon.IdCliente == -1)
+            {
+                
+                Response.Redirect("Articulos.aspx", true);
+            }
+            else
+            {
+                Response.Redirect("Error.aspx", false);
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -54,14 +62,24 @@ namespace Presentacion
             {
                 vouchers = (List<Voucher>)Session["listadoVoucher"]; // RECUPERO EL LISTADO DE LA SESSION PARA PODER ENCONTRAR EL CUPON
 
-                voucher = encontrarVoucher(txtVoucher.Text, vouchers);
+                voucher = encontrarCupon(txtVoucher.Text, vouchers);
 
+                if (voucher != null)
+                {
+                    cuponUsado(voucher);
+                }
+                else
+                {
+                    Response.Redirect("Error.aspx", false);
+                }
+                
+                /*
                 if(voucher != null)
                 {                   
                     Session["voucher"] = voucher; // Guardo el voucher en session para recuperarlo cuando el usuario se registre y participe por el premio.
                     Response.Redirect("Articulos.aspx", true);
                 }
-                
+                */
             }
         }
 
