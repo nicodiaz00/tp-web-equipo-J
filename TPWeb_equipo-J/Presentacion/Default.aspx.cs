@@ -1,4 +1,5 @@
-﻿using Dominio;
+﻿using Antlr.Runtime.Misc;
+using Dominio;
 using Negocio;
 using System;
 using System.Collections.Generic;
@@ -63,5 +64,12 @@ namespace Presentacion
                 
             }
         }
+
+        protected void btnRegistro_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FormularioRegistro.aspx", false);
+        }
+
+       
     }
 }
