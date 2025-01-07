@@ -67,7 +67,7 @@ namespace Presentacion
 
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
-            Response.Redirect("FormularioRegistro.aspx", false);
+            Response.Redirect("ValidacionCliente.aspx", false);
         }
 
        

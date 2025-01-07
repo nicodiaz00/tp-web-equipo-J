@@ -11,48 +11,52 @@ namespace Presentacion
 {
     public partial class FormularioRegistro : System.Web.UI.Page
     {
-        public List <Cliente> listaClientes { get; set; }
+        public Cliente cliente { get; set; }
 
-        public Cliente encontrarCliente(string documento)
+        public void desactivarCampos()
         {
-            Cliente clienteAux = null;
-            foreach (Cliente cliente in (List<Cliente>)Session["listaClientes"])
-            {
-                if (documento == cliente.Dni.ToString())
-                {
-                    
-
-                    clienteAux = cliente;
-                    break;
-
-                }
-            }
-            return clienteAux;
+            txtId.Enabled = false;
+            txtDocumentoCliente.Enabled = false;
+            txtNombre.Enabled = false;
+            txtApellido.Enabled = false;
+            txtEmail.Enabled = false;
+            txtDireccion.Enabled = false;
+            txtCiudad.Enabled = false;
+            txtCodigoPostal.Enabled = false;
         }
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            
+            if (!IsPostBack)
             {
-
-                listaClientes = new List <Cliente> ();
-                ClienteNegocio clienteNegocio = new ClienteNegocio ();
-
-                listaClientes = clienteNegocio.listarClientes();
-
-                Session["listaClientes"] = listaClientes;
-
                 
-                
+                if (Session["cliente"] != null)
+                {
+                    
+                    
+
+                    Cliente cliente = (Cliente)Session["Cliente"];
+                    txtId.Text = cliente.Id.ToString();
+                    txtDocumentoCliente.Text = cliente.Dni.ToString();
+                    txtNombre.Text = cliente.Nombre.ToString();
+                    txtApellido.Text = cliente.Apellido.ToString();
+                    txtCiudad.Text = cliente.Ciudad.ToString();
+                    txtEmail.Text = cliente.Email.ToString();
+                    txtDireccion.Text = cliente.Direccion.ToString();
+                    txtCodigoPostal.Text = cliente.Cp.ToString();
+
+                    desactivarCampos();
+                }
             }
+            
         }
 
-        protected void btnRegistrarse_Click(object sender, EventArgs e)
+       
+
+        protected void btnParticipar_Click(object sender, EventArgs e)
         {
-            if(encontrarCliente(txtDocumento.Text) != null)
-            {
-                lblMensajeRegistro.Text = "estas registrado";
-            }
+
         }
     }
 }
