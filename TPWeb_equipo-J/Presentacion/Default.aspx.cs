@@ -12,9 +12,7 @@ namespace Presentacion
 {
     public partial class _Default : Page
     {
-        private List<Voucher> listadoVoucher = new List<Voucher>();
-
-        
+        private List<Voucher> listadoVoucher = new List<Voucher>(); 
 
         private Voucher encontrarCupon(string codigo, List<Voucher> listadoVoucher)
         {
@@ -73,13 +71,7 @@ namespace Presentacion
                     Response.Redirect("Error.aspx", false);
                 }
                 
-                /*
-                if(voucher != null)
-                {                   
-                    Session["voucher"] = voucher; // Guardo el voucher en session para recuperarlo cuando el usuario se registre y participe por el premio.
-                    Response.Redirect("Articulos.aspx", true);
-                }
-                */
+              
             }
         }
 
