@@ -13,32 +13,5 @@ namespace Presentacion
 
     public partial class Articulos
     {
-
-        /// <summary>
-        /// btnQuieroEste control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnQuieroEste;
-
-        /// <summary>
-        /// btnEste control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEste;
-
-        /// <summary>
-        /// btnEsteTambien control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEsteTambien;
     }
 }
