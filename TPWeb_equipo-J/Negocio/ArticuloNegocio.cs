@@ -13,20 +13,23 @@ namespace Negocio
         {
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
+            List<Imagen> listaDeImagenes = new List<Imagen>();
+            ImagenNegocio ImagenNegocio = new ImagenNegocio();
 
             try
             {
-                datos.setearProcedimiento("spListaArticulos");
-
+                datos.setearProcedimiento("storepListarArt");
+                //string consulta = "SELECT A.Id AS ArticuloId,A.Codigo AS CodigoArticulo,A.Nombre AS DescripcionArticulo,A.IdMarca,A.IdCategoria,A.Precio,I.Id AS ImagenId,I.ImagenURL FROM Articulos A LEFT JOIN Imagenes I ON A.Id = I.IdArticulo";
+                //datos.setearConsulta(consulta);
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Id = (int)datos.Lector["IdArticulo"];
+                    aux.Id = (int)datos.Lector["ArticuloId"];
                     aux.CodigoArticulo = (string)datos.Lector["CodigoArticulo"];
                     aux.NombreArticulo = (string)datos.Lector["NombreArticulo"];
                     aux.DescripcionArticulo = (string)datos.Lector["DescripcionArticulo"];
-                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.Precio = Math.Round((decimal)datos.Lector["Precio"],0);
 
                     aux.Marca = new Marca();
                     aux.Marca.Id = (int)datos.Lector["IdMarca"];
@@ -36,10 +39,9 @@ namespace Negocio
                     aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.Categoria.DescripcionCategoria = (string)datos.Lector["DescripcionCategoria"];
 
-                    aux.Imagenes = new List<Imagen>();
-                    Imagen Imagen = new Imagen();
-                    Imagen.Id = (int)datos.Lector["IdImagen"];
-                    Imagen.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+                    aux.Imagenes = ImagenNegocio.listarImagenesId(aux.Id);
+
+                    
 
                     lista.Add(aux);
                 }
