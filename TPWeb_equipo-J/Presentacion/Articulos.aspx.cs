@@ -32,5 +32,10 @@ namespace Presentacion
         {
             Response.Redirect("PromoForm.aspx", false);
         }
+
+        protected void brnQuieroEste_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
