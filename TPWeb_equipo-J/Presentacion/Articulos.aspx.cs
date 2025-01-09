@@ -28,14 +28,12 @@ namespace Presentacion
             }
         }
 
-        protected void btnQuieroEste_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("PromoForm.aspx", false);
-        }
+      
 
         protected void brnQuieroEste_Click(object sender, EventArgs e)
         {
             string valor = ((Button)sender).CommandArgument;
+            Response.Redirect("ValidacionCliente.aspx", false);
         }
     }
 }
