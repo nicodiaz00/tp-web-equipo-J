@@ -12,9 +12,12 @@ namespace Presentacion
 {
     public partial class Articulos : System.Web.UI.Page
     {
-        public List<Articulo> ListaArticulo { get; set; }
+        //public List<Articulo> ListaArticulo { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            dgvArticulo.DataSource = negocio.ListaArticuloSP();
+            dgvArticulo.DataBind();
 
             if (!IsPostBack)
             {

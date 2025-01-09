@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Articulos.aspx.cs" Inherits="Presentacion.Articulos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <asp:GridView ID="dgvArticulo" runat="server" CssClass="table"></asp:GridView>
+
+   <%-- <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card">
                 <img src="..." class="card-img-top" alt="...">
@@ -15,7 +17,9 @@
             <ItemTemplate>
                 <h1>titulo</h1>
             </ItemTemplate>
-        </asp:Repeater>
+        </asp:Repeater>--%>
+
+    
 
 
 
