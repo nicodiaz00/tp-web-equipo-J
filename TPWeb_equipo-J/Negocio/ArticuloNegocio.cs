@@ -14,6 +14,15 @@ namespace Negocio
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
 
+            try
+            {
+                datos.setearProcedimiento("spListarArticulos");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
     }
