@@ -12,17 +12,16 @@ namespace Presentacion
 {
     public partial class Articulos : System.Web.UI.Page
     {
-        //public List<Articulo> ListaArticulo { get; set; }
+        public List<Articulo> ListaArticulo { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            dgvArticulo.DataSource = negocio.ListaArticuloSP();
-            dgvArticulo.DataBind();
+            ListaArticulo = negocio.ListaArticuloSP();
 
             if (!IsPostBack)
             {
-
-               //repRepetidor.DataSource = 
+                repRepetidor.DataSource = ListaArticulo;
+                repRepetidor.DataBind();
                 
                 
                 //aca deberiamos mostrar la lista de articulos para que el usuario pueda elegir

@@ -19,8 +19,7 @@ namespace Negocio
             try
             {
                 datos.setearProcedimiento("storepListarArt");
-                //string consulta = "SELECT A.Id AS ArticuloId,A.Codigo AS CodigoArticulo,A.Nombre AS DescripcionArticulo,A.IdMarca,A.IdCategoria,A.Precio,I.Id AS ImagenId,I.ImagenURL FROM Articulos A LEFT JOIN Imagenes I ON A.Id = I.IdArticulo";
-                //datos.setearConsulta(consulta);
+                
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
