@@ -35,7 +35,7 @@ namespace Presentacion
 
         protected void brnQuieroEste_Click(object sender, EventArgs e)
         {
-
+            string valor = ((Button)sender).CommandArgument;
         }
     }
 }
