@@ -10,6 +10,14 @@
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
             </div>
-        </div> 
+        </div>
+        <asp:Repeater ID="repRepetidor" runat="server">
+            <ItemTemplate>
+                <h1>titulo</h1>
+            </ItemTemplate>
+        </asp:Repeater>
+
+
+
     </div>
 </asp:Content>
