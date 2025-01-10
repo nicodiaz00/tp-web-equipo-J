@@ -1,9 +1,10 @@
 ﻿﻿.contenedorMain {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px
+        */
 }
 
 body {
@@ -12,18 +13,26 @@ body {
 
 .filaMain {
     display: flex;
-    justify-content: center; /* Alinea horizontalmente al centro */
-    align-items: center; /* Alinea verticalmente al centro */
-    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
-    flex-direction: column; /* Los elementos se apilan verticalmente */
-    text-align: center; /* Alinea el texto al centro */
-    background-color: #f5f5f5; /* Color de fondo opcional */
-    padding: 20px; /* Espaciado interno opcional */
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    /*
+     
+    
+    
+    
+    background-color: #f5f5f5;
+    padding: 20px; 
+    */
 }
 
 .contenedorMain {
-    margin: 10px 0; /* Separación entre los elementos */
+    
+    margin: 10px 0;
     margin-top: 40px;
+       
 }
 
 .contenedorArticulo {
