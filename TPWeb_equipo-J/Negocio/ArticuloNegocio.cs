@@ -39,9 +39,7 @@ namespace Negocio
                     aux.Categoria.DescripcionCategoria = (string)datos.Lector["DescripcionCategoria"];
 
                     aux.Imagenes = ImagenNegocio.listarImagenesId(aux.Id);
-
-                    
-
+              
                     lista.Add(aux);
                 }
                 return lista;

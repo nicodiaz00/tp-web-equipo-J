@@ -1,48 +1,87 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Articulos.aspx.cs" Inherits="Presentacion.Articulos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-
     <div class="row row-cols-1 row-cols-md-3 g-4">
-        <asp:Repeater ID="repRepetidor" runat="server">
-            <ItemTemplate>
-                <div class="col">
-                    <div class="card">
-                        <img src="<%#Eval("Imagenes") %>" class="card-img-top" alt="...">
+        <% 
+            foreach (var poke in ListaArticulo)
+            {
+        %>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
 
-<%--                        <div id="carousel<%# Eval("Id") %>" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <% 
-
-                                    List<Dominio.Imagen> imagenes = (List<Dominio.Imagen>)Eval("Imagenes");
-                                    for (int i = 0; i < imagenes.Count; i++)
-                                    {
-                                        string activeClass = i == 0 ? "active" : "";
-                                %>
-                                <div class="carousel-item <%= activeClass %>">
-                                    <img src="<%= imagenes[i].ImagenUrl %>" class="d-block w-100" alt="...">
-                                </div>
-                                <% } %>
-                            </div>
-                            <!-- Controles del carrusel -->
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel<%# Eval("Id") %>" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carousel<%# Eval("Id") %>" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>--%>
-
-                        <div class="card-body">
-                            <h5 class="card-title"><%#Eval("NombreArticulo")  %></h5>
-                            <p class="card-text"><%#Eval("DescripcionArticulo")   %></p>
-                            <asp:Button ID="brnQuieroEste" runat="server" Text="Quiero este!!!" CssClass=" btn btn-primary" OnClick="brnQuieroEste_Click" CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId"/>
+                <div id="carousel<%: poke.Id %>" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <% 
+                            bool isActive = true; // Para marcar la primera imagen como activa
+                            foreach (var imagen in poke.Imagenes)
+                            {
+                        %>
+                        <div class="carousel-item <%: isActive ? "active" : "" %>">
+                            <img src="<%: imagen.ImagenUrl %>" class="d-block w-100" alt="..." style="height: 400px; object-fit: cover;">
                         </div>
+                        <% isActive = false; %>
+                        <% } %>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel<%: poke.Id %>" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel<%: poke.Id %>" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-            </ItemTemplate>
-        </asp:Repeater>
+
+                <div class="card-body">
+                    <h5 class="card-title"><%: poke.NombreArticulo %></h5>
+                    <p class="card-text"><%: poke.DescripcionArticulo %></p>
+                    <asp:button text="Lo quiero!" cssclass="btn btn-primary" runat="server" id="btnElegirPremio" CommandArgument='<%poke.Id %>' CommandName="ArticuloId" OnClick="btnElegirPremio_Click"/>
+                </div>
+            </div>
+        </div>
+        <%  } %>
     </div>
 </asp:Content>
+
+
+    <%--<asp:Repeater ID="RepeaterArticulo" runat="server">
+        <ItemTemplate>
+            <div class="col">
+                <div class="card">
+                    <div id="carousel<%# Eval("Id") %>" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <% 
+                                bool isActive = true; // Para marcar la primera imagen como activa
+                                foreach (var imagen in (System.Collections.IEnumerable)Eval("Imagenes"))
+                                {
+                        %>
+                            <div class="carousel-item <%: isActive ? "active" : "" %>">
+                                <img src="<%# Eval("ImagenUrl") %>" class="d-block w-100" alt="...">
+                            </div>
+                            <% isActive = false; %>
+                            <% } %>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel<%# Eval("Id") %>" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel<%# Eval("Id") %>" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title"><%# Eval("NombreArticulo") %></h5>
+                        <p class="card-text"><%# Eval("DescripcionArticulo") %></p>
+                        <a href="<%# Eval("Id") %>">Ver Detalle</a>
+                    </div>
+                </div>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>--%>
+
+
+
+
+

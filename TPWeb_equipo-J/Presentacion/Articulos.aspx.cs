@@ -20,17 +20,17 @@ namespace Presentacion
 
             if (!IsPostBack)
             {
-                repRepetidor.DataSource = ListaArticulo;
-                repRepetidor.DataBind();
-                
-                
+                //RepeaterArticulo.DataSource = ListaArticulo;
+                //RepeaterArticulo.DataBind();
+              
+
+
                 //aca deberiamos mostrar la lista de articulos para que el usuario pueda elegir
             }
+
         }
 
-      
-
-        protected void brnQuieroEste_Click(object sender, EventArgs e)
+        protected void btnElegirPremio_Click(object sender, EventArgs e)
         {
             string valor = ((Button)sender).CommandArgument;
             Response.Redirect("ValidacionCliente.aspx", false);
