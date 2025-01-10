@@ -22,7 +22,7 @@ namespace Negocio
                 {
                     Imagen Imagen = new Imagen();
                     Imagen.Id = (int)accesoDatosImagen.Lector["Id"];
-                    Imagen.ImagenUrl = (string)accesoDatosImagen.Lector["ImagenUrl"];
+                    Imagen.UrlImagen = (string)accesoDatosImagen.Lector["ImagenUrl"];
 
                     listaImagenes.Add(Imagen);
                 }
@@ -53,7 +53,7 @@ namespace Negocio
                     Imagen Imagen = new Imagen();
                     Imagen.Id = (int)accesodatosImagen.Lector["Id"];
                     Imagen.IdArticulo = (int)accesodatosImagen.Lector["IdArticulo"];
-                    Imagen.ImagenUrl = (string)accesodatosImagen.Lector["ImagenUrl"];
+                    Imagen.UrlImagen = (string)accesodatosImagen.Lector["ImagenUrl"];
 
                     listaImagen.Add(Imagen);
                 }

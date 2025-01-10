@@ -232,3 +232,5 @@ C:\Users\ngdia\OneDrive\Documentos\c#\tp-web-equipo-J\TPWeb_equipo-J\Presentacio
 C:\Users\ngdia\OneDrive\Documentos\c#\tp-web-equipo-J\TPWeb_equipo-J\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\ngdia\OneDrive\Documentos\c#\tp-web-equipo-J\TPWeb_equipo-J\Presentacion\obj\Debug\Presentacion.dll
 C:\Users\ngdia\OneDrive\Documentos\c#\tp-web-equipo-J\TPWeb_equipo-J\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\ngdia\OneDrive\Documentos\c#\tp-web-equipo-J\TPWeb_equipo-J\Presentacion\bin\Helper.dll
+C:\Users\ngdia\OneDrive\Documentos\c#\tp-web-equipo-J\TPWeb_equipo-J\Presentacion\bin\Helper.pdb

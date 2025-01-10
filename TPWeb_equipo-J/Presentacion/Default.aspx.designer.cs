@@ -33,21 +33,21 @@ namespace Presentacion
         protected global::System.Web.UI.WebControls.Button btnCanjearCupon;
 
         /// <summary>
-        /// Control lblMensaje.
+        /// Control lblError.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// Control btnRegistro.
+        /// Control btnRecargar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegistro;
+        protected global::System.Web.UI.WebControls.Button btnRecargar;
     }
 }

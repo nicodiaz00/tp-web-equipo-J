@@ -12,35 +12,32 @@ namespace Presentacion
 {
     public partial class Error : System.Web.UI.Page
     {
-        private Voucher voucher { get; set; }
+        public Voucher voucher { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
 
-                if (Session["voucher"] != null)
+                if (Session["voucher"] == null)
                 {
-                    voucher = (Voucher)Session["voucher"];
-                    if (voucher.IdCliente != -1 && voucher.IdArticulo != -1)
-                    {
-                        lblerror.Text = " EL voucher ya fue canjeado";
-                    }
+                    lblError.Text = "Codigo Incorrecto";
                 }
                 else
                 {
-                    lblerror.Text = "Codigo incorrecto";
+                    voucher = (Voucher)Session["voucher"];
+                    if (voucher.IdCliente != -1)
+                    {
+                        lblError.Text = "Codigo Usado";
+                    }
                 }
-                
-                 
-                
             }
+
         }
 
-        protected void btnVolverInicio_Click(object sender, EventArgs e)
+        protected void btnVolver_Click(object sender, EventArgs e)
         {
             Session["voucher"] = null;
             Response.Redirect("Default.aspx", false);
-            
         }
     }
 }
